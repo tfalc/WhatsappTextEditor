@@ -1,0 +1,379 @@
+@charset "UTF-8";
+
+/*
+Base/Theme colour: #3949ab
+Button normal: #2196f3
+Button focused/hover: #1976d2
+Button active: #64b5f6
+Button disabled: gray
+Note:
+1. Some styles may fail in IE. Apply as follows:
+	<!-- Apply style only for Non IE -->
+	<!--[if !IE]><!-->
+		<link href="path/to/material-design.css" rel="stylesheet" type="text/css" />
+	<!--<![endif]-->
+
+2. For buttons use:
+	onclick="javascript:....; this.blur();"
+*/
+
+div#progress {
+	background-color: #c5cae9;
+	border-radius: 2pt;
+	height: 1.5em;
+	margin: 4pt 0;
+	overflow: hidden;
+	position: relative;
+}
+div#progress>p {
+	color: white;
+	left: 0;
+	line-height: 1.5em;
+	margin: 0;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+	user-select: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	z-index: 999;
+}
+div#progress>span {
+	background-color: #42a5f5;
+	display: block;
+	height: 100%;
+	position: relative;
+	width: 0;
+}
+
+div#spinner {
+	border: 4pt solid gainsboro;
+	border-top: 4pt solid #2196f3;
+	border-radius: 50%;
+	width: 36pt;
+	height: 36pt;
+	animation: spinner 5s linear infinite;
+}
+@keyframes spinner {
+	0% { /* Blue */
+		border-top: 4pt solid #2196f3;
+		transform: rotate(0deg);
+	}
+	33% { /* Green */
+		border-top: 4pt solid #4caf50;
+		transform: rotate(720deg);
+	}
+	67% { /* Red */
+		border-top: 4pt solid #f44336;
+		transform: rotate(1440deg);
+	}
+	100% { /* Blue */
+		border-top: 4pt solid #2196f3;
+		transform: rotate(2160deg);
+	}
+}
+div#spinnerSVG {
+	text-align: center;
+}
+div#spinnerSVG::before {
+	content: url("../images/spinner.svg");
+}
+
+button, form, input, input::-webkit-input-placeholder, label, select, textarea, textarea::-webkit-input-placeholder {
+	font-family: "Roboto", Arial, Helvetica, sans-serif;
+	font-size: 1em;
+}
+
+figure#spinner>img, img#spinner {
+	display: block;
+	margin: auto;
+}
+figcaption#spinnerText {
+	font-family: "Roboto", Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	text-align: center;
+}
+input, select, textarea {
+	background-color: transparent;
+	border: none;
+	border-bottom: solid 1pt silver;
+	box-sizing: border-box;
+	color: black;
+	margin: 0 0 2pt;
+	outline: none;
+	padding-bottom: 0.5pt;
+}
+input:focus, select:active, select:focus, textarea:focus, textarea:active {
+	border-bottom: 1.5pt solid #3949ab;
+	padding-bottom: 0;
+	outline: none;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+input:disabled, input[disabled], select:disabled, select[disabled], textarea:disabled , textarea[disabled] {
+	background-color: transparent;
+	border-bottom: dashed 1pt lightgray;
+	color: grey;
+	padding-bottom: 0.5pt;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+	color: lightgray;
+}
+input:disabled::-webkit-input-placeholder, input[disabled]::-webkit-input-placeholder,
+textarea:disabled::-webkit-input-placeholder, textarea[disabled]::-webkit-input-placeholder {
+	color: #eee;
+}
+input:readonly, input[readonly] {
+	padding-bottom: 0.5pt;
+}
+input:readonly:focus, input[readonly]:focus {
+	border-bottom: solid 1pt silver;
+}
+/* Buttons (Input) and image */
+button, input[type=button], input[type=image], input[type=reset], input[type=submit] {
+	background-color: #2196f3;
+	border: none;
+	border-radius: 2pt;
+	box-shadow: 0.5pt 1pt 2pt rgba(0, 0, 0, .5);
+	color: white;
+	cursor: default;
+	font-weight: 600;
+	letter-spacing: 0;
+	line-height: 1;
+	margin: 2pt;
+	outline: none;
+	overflow: hidden;
+	padding: 0.5em 1em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	vertical-align: middle;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+}
+button.buttonImage, input.buttonImage, input[type=image] {
+	padding: 2pt;
+	height: 2em;
+	width: 2em;
+}
+button > img {
+	height: 1.67em;
+	width: 1.67em;
+	margin: 0;
+}
+button:focus, button:hover, input[type=button]:focus, input[type=button]:hover, input[type=image]:focus, input[type=image]:hover,
+input[type=reset]:focus, input[type=reset]:hover, input[type=submit]:focus, input[type=submit]:hover {
+	background-color: #1976d2;
+}
+button:active, input[type=button]:active, input[type=image]:active, input[type=reset]:active, input[type=submit]:active {
+	background-color: #64b5f6;
+	box-shadow: 0.5pt 4pt 8pt rgba(0, 0, 0, .5);
+	-webkit-transition: all 0.1s ease-in;
+	-moz-transition: all 0.1s ease-in;
+	-o-transition: all 0.1s ease-in;
+	transition: all 0.1s ease-in;
+}
+button:disabled, button:disabled:focus, button:disabled:hover,
+button[disabled], button[disabled]:focus, button[disabled]:hover,
+input[type=button]:disabled, input[type=button]:disabled:focus, input[type=button]:disabled:hover,
+input[type=button][disabled], input[type=button][disabled]:focus, input[type=button][disabled]:hover,
+input[type=image]:disabled, input[type=image]:disabled:focus, input[type=image]:disabled:hover,
+input[type=image][disabled], input[type=image][disabled]:focus, input[type=image][disabled]:hover,
+input[type=reset]:disabled, input[type=reset]:disabled:focus, input[type=reset]:disabled:hover,
+input[type=reset][disabled], input[type=reset][disabled]:focus, input[type=reset][disabled]:hover,
+input[type=submit]:disabled, input[type=submit]:disabled:focus, input[type=submit]:disabled:hover,
+input[type=submit][disabled], input[type=submit][disabled]:focus, input[type=submit][disabled]:hover {
+	background-color: gray;
+	box-shadow: 0.5pt 1pt 2pt rgba(0, 0, 0, .5);
+	color: silver;
+}
+button[disabled] > img {
+	opacity: .5;
+}
+input[type=image]:disabled, input[type=image][disabled] {
+	background-color: black !important;
+	opacity: .5;
+}
+
+/* Round plain character button for 'i'/'?'*/
+input[type=button].buttonCharacter, input[type=button].buttonCharacter:focus, input[type=button].buttonCharacter:hover {
+	background-color: inherit !important;
+	border: solid 2pt silver;
+	border-radius: 50%;
+	box-shadow: none;
+	color: silver;
+	font-size: 0.85em;
+	font-weight: bold;
+	height: 1.3em;
+	margin: 0 !important;
+	margin-bottom: 0.67em;
+	padding: 0 !important;
+	text-align: center;
+	text-transform: none !important;
+	vertical-align: middle;
+	width: 1.3em;
+}
+input[type=button].buttonCharacter:active {
+	border: solid 2pt gainsboro !important;
+	color: gainsboro;
+}
+/* Square buttons with single character text label */
+input[type=button].buttonSquare {
+	padding: 0.5em !important;
+	width: 2em;
+}
+
+/* Checkbox and Radio buttons*/
+input[type=checkbox], input[type=radio] {
+	display: none;
+	position: absolute;
+}
+input[type=checkbox] + label, input[type=radio] + label {
+	padding-left: 1.3em;
+	padding-right: 1em;
+	position: relative;
+	text-align: start;
+}
+input[type=checkbox] + label:before, input[type=radio] + label:before {
+	content: '';
+	border: 2pt solid silver;
+	display: inline-block;
+	height: 1em;
+	left: 0;
+	/*TODO Fix hack*/
+	margin-top: 0.2em;
+	position: absolute;
+	top: 0;
+	width: 1em;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+input[type=checkbox] + label:after, input[type=radio] + label:after {
+	display: none;
+	content: '';
+	/*TODO Fix hack*/
+	margin-top: 0.2em;
+	position: absolute;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+input[type=checkbox]:disabled + label, input[type=checkbox][disabled] + label,
+input[type=radio]:disabled + label, input[type=radio][disabled] + label {
+	color: grey;
+}
+input[type=checkbox]:disabled + label:focus:before, input[type=checkbox][disabled] + label:focus:before,
+input[type=radio]:disabled + label:focus:before, input[type=radio][disabled] + label:focus:before {
+	border: 2pt solid lightgrey;
+}
+input[type=checkbox]:disabled + label:before, input[type=checkbox][disabled] + label:before,
+input[type=radio]:disabled + label:before, input[type=radio][disabled] + label:before {
+	border-color: lightgrey;
+}
+input[type=checkbox]:checked + label:after, input[type=radio]:checked + label:after {
+	display: block;
+}
+input[type=checkbox] + label:before {
+	border-radius: 25%;
+}
+input[type=checkbox] + label:after {
+	border: 2.5pt solid white;
+	border-top: 0;
+	border-left: 0;
+	box-sizing: border-box;
+	height: 0.83em;
+	left: 0.25em;
+	top: 0pt;
+	transform: rotate(45deg);
+	width: 0.5em;
+}
+input[type=checkbox]:checked + label:before {
+	background: #3949ab;
+	border: 2pt solid #3949ab;
+}
+input[type=checkbox]:checked:disabled + label:before, input[type=checkbox]:checked[disabled] + label:before {
+	background: lightgrey;
+	border: 2pt solid lightgrey;
+}
+
+input[type=checkbox].switch + label {
+	padding-left: 2em;
+}
+input[type=checkbox].switch + label:before {
+	background-color: #9e9e9e;
+	border: none;
+	border-radius: 0.25em;
+	content: "";
+	height: 0.5em;
+	position: absolute;
+	top: 0.25em;
+	width: 1.75em;
+}
+input[type=checkbox].switch + label:after {
+	background-color: #fafafa;
+	border: none;
+	border-radius: 50%;
+	box-shadow: 0.5pt 0.75pt 1.5pt rgba(0, 0, 0, .5);
+	content: "";
+	display: inline-block;
+	height: 1em;
+	left: 0em;
+	position: absolute;
+	width: 1em;
+}
+input[type=checkbox].switch:checked + label:before {
+	background: #c5cae9;
+}
+input[type=checkbox].switch:checked + label:after {
+	background-color: #3949ab;
+	left: 0.75em;
+}
+input[type=checkbox][disabled].switch + label:before, input[type=checkbox][disabled].switch:checked + label:before {
+	background-color: lightgray;
+}
+input[type=checkbox][disabled].switch + label:after, input[type=checkbox][disabled].switch:checked + label:after {
+	background-color: gray;
+}
+
+input[type=radio] + label:before {
+	border-radius: 50%;
+}
+input[type=radio] + label:after {
+	background: #3949ab;
+	border-radius: 50%;
+	height: 0.5em;
+	left: 0.25em;
+	top: 0.25em;
+	width: 0.5em;
+}
+input[type=radio]:checked + label:before {
+	border: 0.15em solid #3949ab;
+}
+input[type=radio]:checked:disabled + label:before, input[type=radio]:checked[disabled] + label:before {
+	border: 0.15em solid lightgrey;
+}
+input[type=radio]:checked:disabled + label:after, input[type=radio]:checked[disabled] + label:after {
+	background: lightgrey;
+}
+
+label:after, label:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.fixed {
+	font-family: monospace;
+}

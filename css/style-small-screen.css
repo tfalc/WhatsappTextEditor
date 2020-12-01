@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+body {
+	border-radius: 0;
+	box-shadow: none;
+	margin: 0;
+	max-width: inherit;
+}
+
+h1 {
+	font-size: 18pt !important;
+}
+h2 {
+	font-size: 16pt !important;
+}
+h3 {
+	font-size: 14pt !important;
+}
+h4 {
+	font-size: 12pt !important;
+}
+
+html {
+	background-color: white;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+ol, ol li, ul, ul li {
+	margin-left: 0;
+	padding-left: 0;
+}
+ol, ul {
+	list-style-position: inside;
+	margin-left: 1em;
+}
+
+ul#menuNavigation {
+	padding: 2pt;
+}
+ul#menuNavigation > li {
+	margin-bottom: 4pt;
+}
+ul#menuNavigation, #header.bottomShadow {
+	box-shadow: 0 2pt 4pt 0 rgba(0, 0, 0, .5);
+}
+#header {
+	border-radius: 0;
+}
+
+@media only screen and (max-width: 639px) {
+	div.row {
+		margin: 0;
+	}
+	div.row > label, div.row > input[type=email], div.row > input[type=text], div.row > select , div.row > textarea {
+		text-align: start;
+		max-width: inherit !important;
+		width: 50% !important;
+	}
+
+	select.row {
+		margin-left: inherit;
+		margin-right: inherit;
+	}
+
+	ul#menuNavigation {
+		font-size: 10.5pt;
+		padding-right: 50%;
+		text-align: start;
+	}
+	ul#menuNavigation > li {
+		min-width: inherit;
+	}
+	ul#menuNavigation ul ul li {
+		white-space: normal;
+	}
+	ul#menuNavigation span.menuRightArrow {
+		margin-right: 7pt;
+	}
+
+	.maxWidth5em, .maxWidth10em, .maxWidth15em, .maxWidth20em, .maxWidth25em,
+	.maxWidth30em, .maxWidth35em, .maxWidth40em, .maxWidth45em, .maxWidth50em,
+	.minWidth5em, .minWidth10em, .minWidth15em, .minWidth20em, .minWidth25em,
+	.minWidth30em, .minWidth35em, .minWidth40em, .minWidth45em, .minWidth50em,
+	.width20pc, .width25pc, .width30pc, .width33pc, .width40pc, .width50pc,
+	.width60pc, .width67pc, .width70pc, .width75pc, .width80pc, .width100pc {
+		max-width: inherit !important;
+		min-width: inherit !important;
+		width: 100% !important;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+	ul#menuNavigation {
+		font-size: 9pt;
+	}
+}
+
+@media only screen and (max-width: 359px) {
+	div.row > label, div.row > input[type=email], div.row > input[type=text], div.row > select , div.row > textarea {
+		width: 100% !important;
+	}
+	ul#menuNavigation ul li {
+		white-space: normal;
+	}
+}
+
+/*TODO Fix hack*/
+input[type=checkbox] + label:before, input[type=radio] + label:before, input[type=checkbox] + label:after, input[type=radio] + label:after {
+	margin-top: 0.1em;
+}

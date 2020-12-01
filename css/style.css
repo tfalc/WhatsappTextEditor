@@ -1,0 +1,104 @@
+* {
+	padding: 0;
+	margin: auto;
+	vertical-align: baseline;
+	list-style: none;
+	align-content: center;
+}
+
+.clearfix {
+	overflow: auto;
+}
+
+#form {
+	background-color: whitesmoke;
+	width: 60%;
+}
+
+#visualizarmensagem {
+	padding-bottom: 5px;
+	color: #616161;
+	text-shadow: #e0e0e0 1px 1px 0;
+	color: #616161;
+}
+
+#conteudoDinamico {
+	padding: 10px;
+}
+
+#textoeditado {
+	background: #13e0c5;
+	box-shadow: 0 1pt 1pt rgba(0, 0, 0, .2);
+	border-radius: 4pt;
+	display: block;
+	padding: 4pt;
+	position: center;
+	width: 100%;
+	white-space: pre-wrap;
+	/* Since CSS 2.1 */
+	white-space: -moz-pre-wrap;
+	/* Mozilla, since 1999 */
+	white-space: -pre-wrap;
+	/* Opera 4-6 */
+	white-space: -o-pre-wrap;
+	/* Opera 7 */
+	word-wrap: break-word;
+	/* Internet Explorer 5.5+ */
+}
+
+#textopre {
+	color: gray;
+}
+
+#botoes {
+	align-content: center;
+	padding: 5px;
+}
+
+#textoedicao{
+	padding-top: 5px;
+}
+
+input#buttonBold {
+	font-weight: bold;
+}
+
+input#buttonItalic {
+	font-style: italic;
+}
+
+input#buttonMonospace {
+	font-family: monospace;
+}
+
+input#buttonStrikethrough {
+	text-decoration: line-through;
+}
+
+pre {
+	white-space: pre-wrap;
+	/* Since CSS 2.1 */
+	white-space: -moz-pre-wrap;
+	/* Mozilla, since 1999 */
+	white-space: -pre-wrap;
+	/* Opera 4-6 */
+	white-space: -o-pre-wrap;
+	/* Opera 7 */
+	word-wrap: break-word;
+	/* Internet Explorer 5.5+ */
+}
+
+#caixavisualizacao {
+	width: 100%;
+}
+
+#cabecalho {
+	text-align: center;
+	color: transparent;
+	background: #666666;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+	padding: 10px;
+}

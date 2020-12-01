@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Create formatted WhatsApp messages with ease to paste in WhatsApp Web" />
+    <meta name="keywords" content="format,text,whatsapp web" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#00227b">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#00227b">
+    <meta name="msapplication-navbutton-color" content="#00227b">
+    <title>Formatador de texto do Whatsapp</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../css/style-small-screen.css" rel="stylesheet" type="text/css"
+        media="only screen and (max-width: 960px), only screen and (max-device-width: 480px)" />
+    <!--[if !IE]><!-->
+    <link href="../css/material-design.css" rel="stylesheet" type="text/css" />
+    <!--<![endif]-->
+    <script src="../js/handheld.js"></script>
+    <script type="text/javascript">
+        handheldCheck("../css/style-small-screen.css");
+    </script>
+</head>
+
+<body id="works">
+    <div id="cabecalho">
+        <h1>Formatador de Texto de Whatsapp</h1>
+        <p>Use com o <a href="https://web.whatsapp.com" target="_blank">WhatsApp Web</a>.</p>
+        <p>Crie texto formatados para usar com o Whatsapp Web.</p>
+    </div>
+    <div id=form>
+        <form name="form">
+            <div id="conteudoDinamico">
+                <p id="visualizarmensagem">Visualizar mensagem editada:</p>
+                <div id="textoeditado" class="caixavisualizacao">
+                    <div id="textopre">
+                        Aqui você verá como seu texto ficará.
+                    </div>
+                </div>
+            </div>
+            <div id="botoes">
+                <button type="button" name="buttonCopy" class="buttonImage" title="Copiar texto"
+                    onclick="javascript: Widget.copyToClipboard('whatsappText'); this.blur();" disabled="disabled"><img
+                        src="images/button-copy.png"></button>
+                <input type="button" name="buttonBold" id="buttonBold" class="button buttonSquare" value="B"
+                    title="Bold" onclick="javascript: format(0); this.blur();" disabled="disabled" />
+                <input type="button" name="buttonItalic" id="buttonItalic" class="button buttonSquare" value="I"
+                    title="Italic" onclick="javascript: format(1); this.blur();" disabled="disabled" />
+                <input type="button" name="buttonStrikethrough" id="buttonStrikethrough" class="button buttonSquare"
+                    value="S" title="Strikethrough" onclick="javascript: format(2); this.blur();" disabled="disabled" />
+                <input type="button" name="buttonMonospace" id="buttonMonospace" class="button buttonSquare" value="M"
+                    title="Monospace" onclick="javascript: format(3); this.blur();" disabled="disabled" />
+
+                <p id="textoedicao">Digite abaixo a mensagem que você quer editar. Selecione o texto que deseja editar e clique no botão
+                    desejado acima.</p>
+            </div>
+            <div id="caixatext">
+                <textarea name="whatsappText" id="whatsappText" class="resizeVertical width100pc"
+                    onkeyup="javascript: update();" onmouseup="javascript: update();"
+                    onselect="javascript: whatsappTextSelected();" cols="80" rows="3" placeholder="Digite o texto aqui"
+                    autofocus></textarea>
+            </div>
+            <noscript>
+                <h2>Recurso indisponível!</h2>
+                <ul>
+                    <li>Esta página requer o uso de JavaScript.</li>
+                    <li>Seu navegador parece não ter o suporte ao JavaScript ativado.</li>
+                    <li>Se o JavaScript estiver desabilitador, por favor habilite o recurso e <a
+                            href="whatsapp-text-formatter.htm">recarregue esta página</a>.</li>
+                </ul>
+            </noscript>
+        </form>
+    </div>
+    <a id="buttonTop" href="#top" onclick="javascript: this.blur();">&#9650;</a>
+</body>
+<script type="text/javascript" src="../js/String.js"></script>
+<script type="text/javascript" src="../js/Widget.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="js/whatsapp-text-formatter.js"></script>
+
+</html>
